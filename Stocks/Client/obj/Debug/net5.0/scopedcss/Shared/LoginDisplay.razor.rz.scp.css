@@ -1,0 +1,41 @@
+.type[b-04og89z4p5] {
+    font-size: 50px;
+    font-weight: 900;
+    margin: 50px 40px 40px;
+}
+
+
+
+a[b-04og89z4p5] {
+    margin-left: 35px;
+}
+
+*[b-04og89z4p5], [b-04og89z4p5]::after, [b-04og89z4p5]::before {
+    box-sizing: unset;
+}
+
+.bn49[b-04og89z4p5] {
+    border: 0;
+    text-align: center;
+    display: inline-block;
+    padding: 5px;
+    width: 80%;
+    margin: 3px 10%;
+    color: #ffffff;
+    background-color: #36a2eb;
+    border-radius: 8px;
+    font-family: "proxima-nova-soft", sans-serif;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: box-shadow 200ms ease-out;
+}
+
+a:hover[b-04og89z4p5] {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.marg-bottom[b-04og89z4p5] { 
+    margin-bottom: 13px;
+}

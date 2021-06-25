@@ -1,0 +1,21 @@
+﻿<div class="art">
+    @if (articles != null)
+    {
+        @foreach (var art in articles)
+        {
+        <p class="inline">
+            <img src="@art.image_url" width="100" height="100" href="@art.article_url"/>
+            <div class="bord-top"><a href="@art.article_url" class="bord-top">@art.title</a></div>
+        </p>
+        }
+    }
+    else
+    {
+        <a>Sorry, we can't provide any data for that ticker.</a>
+    } 
+</div>
+
+@code {
+    [Parameter]
+    public List<Api_ArticleDetailsDTO> articles { get; set; }
+}

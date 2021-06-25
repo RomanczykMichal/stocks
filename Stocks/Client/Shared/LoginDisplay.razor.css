@@ -1,0 +1,41 @@
+﻿.type {
+    font-size: 50px;
+    font-weight: 900;
+    margin: 50px 40px 40px;
+}
+
+
+
+a {
+    margin-left: 35px;
+}
+
+*, ::after, ::before {
+    box-sizing: unset;
+}
+
+.bn49 {
+    border: 0;
+    text-align: center;
+    display: inline-block;
+    padding: 5px;
+    width: 80%;
+    margin: 3px 10%;
+    color: #ffffff;
+    background-color: #36a2eb;
+    border-radius: 8px;
+    font-family: "proxima-nova-soft", sans-serif;
+    font-weight: 600;
+    text-decoration: none !important;
+    transition: box-shadow 200ms ease-out;
+}
+
+a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.marg-bottom { 
+    margin-bottom: 13px;
+}

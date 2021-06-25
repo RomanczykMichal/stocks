@@ -1,0 +1,20 @@
+﻿@inherits LayoutComponentBase
+
+<AuthorizeView>
+    <Authorized>
+        <div class="container">
+            
+            <div class="left">
+                <LoginDisplay />
+            </div>
+
+            <div class="right">
+                @Body
+            </div>
+            
+        </div>
+    </Authorized>
+    <NotAuthorized>
+        <RedirectToLogin />
+    </NotAuthorized>
+</AuthorizeView>

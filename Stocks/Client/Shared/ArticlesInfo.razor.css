@@ -1,0 +1,13 @@
+﻿.art {
+    color: black;
+    max-height: 168px;
+    overflow-y: auto;
+}
+
+.inline {
+    display:inline-flex;
+}
+
+.bord-top {
+    margin-top: 45px;
+}

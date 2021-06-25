@@ -1,0 +1,83 @@
+﻿@page "/stock"
+@using Syncfusion.Blazor.Layouts
+@using Newtonsoft.Json;
+@inject IStockRepo iStockRepo
+@inject AuthenticationStateProvider authentication
+
+<div class="topic">
+    <div class="type2">Browse through companies</div>
+    @if (tickerDetails != null)
+    {
+        @if (favorite)
+        {
+            <span class="heart" @onclick="@AddOrRemoveFavorite">&#9829;</span>
+        }
+        else
+        {
+            <span class="heart" @onclick="@AddOrRemoveFavorite">&#9825;</span>
+        }
+    }
+</div>
+
+<div class="compose">
+    <SfAutoComplete TValue="string" TItem="Api_TickersResponseDTO" @bind-Value="@tickerName" Placeholder="e.g. AAPL" @oninput="@(async e => { KeyPressed(e); await FindNewTickersAsync(); })" @onfocusout="@UpdateTickerData" DataSource="@tickers">
+        <AutoCompleteFieldSettings Value="Ticker"></AutoCompleteFieldSettings>
+    </SfAutoComplete>
+</div>
+
+<div class="compose">
+    <SfDashboardLayout CellSpacing="@(new double[]{10 ,10 })" CellAspectRatio="12" Columns="2" AllowDragging="false">
+        <DashboardLayoutPanels>
+            <DashboardLayoutPanel SizeY=4>
+                <HeaderTemplate><div class='header'> Ticker Details</div></HeaderTemplate>
+                <ContentTemplate>
+                    @if (tickerDetails != null)
+                    {
+                        <CompanyInfo tickerDetails="@tickerDetails" />
+                    }
+                    else
+                    {
+                        <CompanyInfo />
+                    }
+                </ContentTemplate>
+            </DashboardLayoutPanel>
+            <DashboardLayoutPanel SizeY=4>
+                <HeaderTemplate><div class='header'> Articles</div></HeaderTemplate>
+                <ContentTemplate>
+                    @if (tickerDetails != null)
+                    {
+                        <ArticlesInfo articles="@articles" />
+                    }
+                    else
+                    {
+                        <ArticlesInfo />
+                    }
+                </ContentTemplate>
+            </DashboardLayoutPanel>
+            <DashboardLayoutPanel SizeX=2 SizeY=10>
+                <HeaderTemplate><div class='header'> Chart</div></HeaderTemplate>
+                <ContentTemplate>
+                    @if (tickerData != null)
+                    {
+                        <ChartInfo tickerData="@tickerData" tickerName="@tickerName" @ref="chartInfoChild" />
+                    }
+                    else
+                    {
+                        <ArticlesInfo />
+                    }
+                </ContentTemplate>
+            </DashboardLayoutPanel>
+        </DashboardLayoutPanels>
+    </SfDashboardLayout>
+</div>
+
+@code {
+    protected override async Task OnInitializedAsync()
+    {
+        await base.OnInitializedAsync();
+        tickerData = new List<ChartDataDTO>();
+
+        var identity = await authentication.GetAuthenticationStateAsync();
+        username = identity.User.Identity.Name;
+    }
+} 

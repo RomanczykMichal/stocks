@@ -1,0 +1,28 @@
+﻿@using Microsoft.AspNetCore.Components.Authorization
+@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+
+@inject NavigationManager Navigation
+@inject SignOutSessionStateManager SignOutManager
+
+
+<AuthorizeView>
+    <Authorized>
+        <div class="type">Welcome, @context.User.Identity.Name!</div>
+
+        <ul class="nav nav-pills flex-column">
+            <li><a class="bn49" href="authentication/profile">Profile</a></li>
+            <li><a class="bn49" href="/stock">Stocks</a></li>
+            <li><a class="bn49" href="favorites">Favorites</a></li>
+            <li class="marg-bottom"><a class="bn49" @onclick="BeginSignOut">Log out</a></li>
+        </ul>
+    </Authorized>
+</AuthorizeView>
+
+
+@code{
+    private async Task BeginSignOut(MouseEventArgs args)
+    {
+        await SignOutManager.SetSignOutState();
+        Navigation.NavigateTo("authentication/logout");
+    }
+}

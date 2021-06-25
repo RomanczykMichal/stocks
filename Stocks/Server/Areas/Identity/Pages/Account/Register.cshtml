@@ -1,0 +1,40 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="container">
+    <div class="left">
+        <div class="type">@ViewData["Title"]</div>
+        <div class="eula">Register to search through latest stock data and charts. We are happy to have you here! </div>
+    </div>
+    <div class="right">
+        <form id="account" method="post">
+            <div class="form">
+                <div asp-validation-summary="All" class="text-danger"></div>
+                <label asp-for="Input.Email"></label>
+                <input asp-for="Input.Email" />
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+
+                <label asp-for="Input.Password"></label>
+                <input asp-for="Input.Password" />
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+
+                <label asp-for="Input.ConfirmPassword"></label>
+                <input asp-for="Input.ConfirmPassword" />
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+
+                <button class="button" id="register">
+                    <span class="buttonspan">
+                        Register!
+                    </span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

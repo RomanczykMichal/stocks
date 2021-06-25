@@ -1,0 +1,16 @@
+﻿<div style="color:black;">
+    @if (tickerDetails != null)
+    {
+        <a>@tickerDetails.ceo</a>
+        <a>@tickerDetails.description</a>
+    }
+    else
+    {
+        <a>Sorry, we can't provide any data for that ticker.</a>
+    }
+</div>
+
+@code {
+    [Parameter]
+    public Api_TickerResponseDetailsDTO tickerDetails { get; set; }
+}

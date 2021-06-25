@@ -1,0 +1,38 @@
+﻿<div style="color:black;">
+    @if (tickerData.Count > 0)
+    {
+        <SfStockChart @ref="@Chart" IndicatorType="@IndicatorType" TrendlineType="@TrendlineType" SeriesType="@SeriesType" ExportType="@ExportType">
+            <StockChartTooltipSettings Enable="true"></StockChartTooltipSettings>
+            <StockChartSeriesCollection>
+                <StockChartSeries DataSource="@tickerData" Type="ChartSeriesType.HiloOpenClose" XName="TimeConverted" High="H" Low="L" Open="O" Close="C" Volume="V" />
+            </StockChartSeriesCollection>
+        </SfStockChart>
+    }
+    else
+    {
+        <a>Sorry, we can't provide any data for that ticker.</a>
+    }
+</div>
+
+@code {
+    public List<TechnicalIndicators> IndicatorType = new List<TechnicalIndicators>() { };
+    public List<TrendlineTypes> TrendlineType = new List<TrendlineTypes>() { };
+    public List<Syncfusion.Blazor.Charts.ExportType> ExportType = new List<Syncfusion.Blazor.Charts.ExportType>() { };
+    public List<ChartSeriesType> SeriesType = new List<ChartSeriesType>() { };
+
+    [Parameter]
+    public List<ChartDataDTO> tickerData { get; set; }
+    [Parameter]
+    public string tickerName { get; set; }
+    public SfStockChart Chart { get; set; }
+
+        protected override void OnInitialized()
+        {
+            base.OnInitialized();
+        }
+
+        public void UpdateChart()
+    {
+        Chart.Refresh();
+    }
+}

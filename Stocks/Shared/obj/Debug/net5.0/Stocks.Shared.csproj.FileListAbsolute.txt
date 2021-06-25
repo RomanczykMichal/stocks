@@ -1,0 +1,11 @@
+D:\Uczelnia\4 sem\APBD\Cw\projekt\projekt-koncowy-s20422\Stocks\Shared\bin\Debug\net5.0\Stocks.Shared.deps.json
+D:\Uczelnia\4 sem\APBD\Cw\projekt\projekt-koncowy-s20422\Stocks\Shared\bin\Debug\net5.0\Stocks.Shared.dll
+D:\Uczelnia\4 sem\APBD\Cw\projekt\projekt-koncowy-s20422\Stocks\Shared\bin\Debug\net5.0\ref\Stocks.Shared.dll
+D:\Uczelnia\4 sem\APBD\Cw\projekt\projekt-koncowy-s20422\Stocks\Shared\bin\Debug\net5.0\Stocks.Shared.pdb
+D:\Uczelnia\4 sem\APBD\Cw\projekt\projekt-koncowy-s20422\Stocks\Shared\obj\Debug\net5.0\Stocks.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\Uczelnia\4 sem\APBD\Cw\projekt\projekt-koncowy-s20422\Stocks\Shared\obj\Debug\net5.0\Stocks.Shared.AssemblyInfoInputs.cache
+D:\Uczelnia\4 sem\APBD\Cw\projekt\projekt-koncowy-s20422\Stocks\Shared\obj\Debug\net5.0\Stocks.Shared.AssemblyInfo.cs
+D:\Uczelnia\4 sem\APBD\Cw\projekt\projekt-koncowy-s20422\Stocks\Shared\obj\Debug\net5.0\Stocks.Shared.csproj.CoreCompileInputs.cache
+D:\Uczelnia\4 sem\APBD\Cw\projekt\projekt-koncowy-s20422\Stocks\Shared\obj\Debug\net5.0\Stocks.Shared.dll
+D:\Uczelnia\4 sem\APBD\Cw\projekt\projekt-koncowy-s20422\Stocks\Shared\obj\Debug\net5.0\ref\Stocks.Shared.dll
+D:\Uczelnia\4 sem\APBD\Cw\projekt\projekt-koncowy-s20422\Stocks\Shared\obj\Debug\net5.0\Stocks.Shared.pdb

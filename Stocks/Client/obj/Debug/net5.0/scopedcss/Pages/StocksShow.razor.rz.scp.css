@@ -1,0 +1,32 @@
+
+.type2[b-4ntcemt89t] {
+    font-size: 40px;
+    font-weight: 900;
+    margin: 40px 40px 15px;
+}
+
+.compose[b-4ntcemt89t] {
+    width: 98%;
+    margin-left: 1%;
+    margin-bottom: 1%;
+}
+
+.header[b-4ntcemt89t] {
+    font-weight: bold;
+    color: darkgrey;
+}
+
+.heart[b-4ntcemt89t] {
+    font-size: 80px;
+    margin-right: 40px;
+    margin-top: 5px;
+    color: #e63c3c;
+    cursor: pointer;
+}
+
+.topic[b-4ntcemt89t] {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: stretch;
+    justify-content: space-between;
+}

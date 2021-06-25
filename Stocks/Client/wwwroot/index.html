@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>StockView.io</title>
+    <base href="/" />
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="Stocks.Client.styles.css" rel="stylesheet" />
+    <link href="_content/Syncfusion.Blazor.Themes/bootstrap4.css" rel="stylesheet" />
+    <script src="https://github.com/Daddoon/Blazor.Polyfill/releases/download/3.0.1/blazor.polyfill.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.20/lodash.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div style="margin-left: 44vw; margin-top: 32vh;">
+            <div class="loadingio-spinner-dual-ring-opztp667es">
+                <div class="ldio-l8frjq86i9b">
+                    <div></div><div><div></div></div>
+                </div>
+            </div>
+        </div>
+        <style type="text/css">
+            @keyframes ldio-l8frjq86i9b {
+                0% {
+                    transform: rotate(0)
+                }
+
+                100% {
+                    transform: rotate(360deg)
+                }
+            }
+
+            .ldio-l8frjq86i9b div {
+                box-sizing: border-box !important;
+            }
+
+            .ldio-l8frjq86i9b > div {
+                position: absolute;
+                width: 144px;
+                height: 144px;
+                top: 28px;
+                left: 28px;
+                border-radius: 50%;
+                border: 16px solid #000;
+                border-color: #ffffff transparent #ffffff transparent;
+                animation: ldio-l8frjq86i9b 1s linear infinite;
+            }
+
+                .ldio-l8frjq86i9b > div:nth-child(2) {
+                    border-color: transparent
+                }
+
+                    .ldio-l8frjq86i9b > div:nth-child(2) div {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        transform: rotate(45deg);
+                    }
+
+                        .ldio-l8frjq86i9b > div:nth-child(2) div:before, .ldio-l8frjq86i9b > div:nth-child(2) div:after {
+                            content: "";
+                            display: block;
+                            position: absolute;
+                            width: 16px;
+                            height: 16px;
+                            top: -16px;
+                            left: 48px;
+                            background: #ffffff;
+                            border-radius: 50%;
+                            box-shadow: 0 128px 0 0 #ffffff;
+                        }
+
+                        .ldio-l8frjq86i9b > div:nth-child(2) div:after {
+                            left: -16px;
+                            top: 48px;
+                            box-shadow: 128px 0 0 0 #ffffff;
+                        }
+
+            .loadingio-spinner-dual-ring-opztp667es {
+                width: 200px;
+                height: 200px;
+                display: inline-block;
+                overflow: hidden;
+                background: none;
+            }
+
+            .ldio-l8frjq86i9b {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                transform: translateZ(0) scale(1);
+                backface-visibility: hidden;
+                transform-origin: 0 0;
+            }
+
+                .ldio-l8frjq86i9b div {
+                    box-sizing: content-box;
+                }
+        </style>
+    </div>
+    
+    <footer class="footer border-top text-muted">
+        &copy; 2021 - Michał Romańczyk PJWSTK
+    </footer>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+    <script src="_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication/AuthenticationService.js"></script>
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script src="js/Utilities.js"></script>
+</body>
+
+</html>

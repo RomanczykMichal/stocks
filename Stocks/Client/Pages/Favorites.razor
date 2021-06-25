@@ -1,0 +1,62 @@
+﻿@page "/favorites"
+@using Newtonsoft.Json;
+@inject IStockRepo iStockRepo
+@inject AuthenticationStateProvider authentication
+
+<div class="type2">Favorite companies</div>
+
+<div class="compose">
+    <SfGrid DataSource="@companiesDetails" AllowPaging="true" AllowSorting="true" AllowMultiSorting="true">
+        <GridPageSettings PageSizes="true"></GridPageSettings>
+        <GridColumns>
+            <GridColumn HeaderText="Company Logo" TextAlign="TextAlign.Center" Width="120">
+                <Template>
+                    @{
+                        var company = (context as TickerDetailsResponse);
+                        <div class="image">
+                            @if (company.logo == null)
+                            {
+                                <img src="https://isorepublic.com/wp-content/uploads/2018/11/stocks-1100x733.jpg" alt="@company.name" />
+
+                            }
+                            else
+                            {
+                                <img src="@(company.logo)" alt="@company.name" />
+                            }
+                        </div>
+                    }
+                </Template>
+            </GridColumn>
+            <GridColumn Field=@nameof(TickerDetailsResponse.name) HeaderText="Name" TextAlign="TextAlign.Left" Width="200"></GridColumn>
+            <GridColumn Field=@nameof(TickerDetailsResponse.symbol) HeaderText="Symbol" Width="80"></GridColumn>
+            <GridColumn Field=@nameof(TickerDetailsResponse.ceo) HeaderText="Ceo" TextAlign="TextAlign.Left" Width="120"></GridColumn>
+            <GridColumn Field=@nameof(TickerDetailsResponse.country) HeaderText="Country" TextAlign="TextAlign.Left" Width="150"></GridColumn>
+        </GridColumns>
+    </SfGrid>
+</div>
+
+@code{
+    private SfGrid<TickerDetailsResponse> DefaultGrid;
+    public string username { get; set; }
+    public UserFavorites userFavorites { get; set; }
+    public List<TickerDetailsResponse> companiesDetails { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var identity = await authentication.GetAuthenticationStateAsync();
+        username = identity.User.Identity.Name;
+
+        await GetUserFavorites();
+        companiesDetails = userFavorites.TickersDetailsList;
+    }
+
+    public async Task GetUserFavorites()
+    {
+        userFavorites = await iStockRepo.GetUserFavoritesAsync(username);
+    }
+
+    public void RecordDoubleClickHandler(RecordDoubleClickEventArgs<TickerDetailsResponse> args)
+    {
+
+    }
+}
