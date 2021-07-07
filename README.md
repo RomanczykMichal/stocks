@@ -1,5 +1,5 @@
 # Stocks App
-A project showing a SPA application using ASP.NET Core 5.0, EFC, REST Api, Blazor WebAssembly (also some custom css and html) and SQL database. The application is similar to Yahoo Finance (https://finance.yahoo.com).
+A project showing a SPA application using ASP.NET Core 5.0, EFC, REST Api, Blazor WebAssembly (also some custom css and html) and SQL database. The application is similar to [Yahoo Finance](https://finance.yahoo.com).
 
 # The architecture of the application is presented below
 ![image](https://user-images.githubusercontent.com/80456075/123469429-53861f00-d5f3-11eb-9e29-82d30538ff2e.png)
